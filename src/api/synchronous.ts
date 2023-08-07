@@ -16,7 +16,7 @@ export async function synchronous(client: BaseClient, config: synchronousConfig)
   console.log(fromRecords)
   if (!fromRecords) return
   fromRecords.sort((a, b) => b?.last_modified_time as number - a?.last_modified_time as number);
-  const newRecord = fromRecords.pop();
+  const newRecord = fromRecords.shift();
   if (!newRecord) return;
   if (fromRecords.length === 0) {
     console.log(`There is no same record in the ${from}, so prepare to create a new record in the ${to}.`, JSON.stringify(fromRecords[0]));
