@@ -54,14 +54,5 @@ export async function searchRecordsByIndex(client: BaseClient, index: string, va
       table_id: tableId,
     }
   })).data?.items;
-  console.log(await client.base.appTableRecord.list({
-    params: {
-      filter: `CurrentValue.[${index}] = "${value}"`,
-      field_names: `["${index}"]`,
-    },
-    path: {
-      table_id: tableId,
-    }
-  }))
   return records;
 }
