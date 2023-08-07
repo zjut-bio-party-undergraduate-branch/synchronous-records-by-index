@@ -1,9 +1,9 @@
 import { BaseClient } from '@base-open/node-sdk';
 import express from 'express'
 import { synchronous } from './src/api/synchronous';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config({ path: './.env.development'});
+// dotenv.config({ path: './.env.development'});
 
 const APP_TOKEN: string = process.env["APP_TOKEN"] || "";
 const PERSONAL_BASE_TOKEN: string = process.env["PERSONAL_BASE_TOKEN"] || "";
